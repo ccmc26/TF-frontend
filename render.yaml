@@ -8,5 +8,3 @@
         value: https://tf-backend-production.up.railway.app
       - key: PORT
         value: "8080"
-      - key: PUBLIC_URL
-        value: https://tf-frontend-production.up.railway.app/
