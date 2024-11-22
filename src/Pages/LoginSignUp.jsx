@@ -5,6 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 // import { GoPersonFill, GoPasskeyFill } from "react-icons/go";
 
 const LoginSignUp = () => {
+  const apiUrl = process.env.REACT_APP_API_URL;
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
@@ -13,7 +14,7 @@ const LoginSignUp = () => {
     e.preventDefault(); // Evita que se recargue la página
   
     try {
-      const response = await fetch('http://localhost:8080/api/users/login', {
+      const response = await fetch(`${apiUrl}/users/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

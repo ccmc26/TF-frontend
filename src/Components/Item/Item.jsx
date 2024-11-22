@@ -4,14 +4,15 @@ import './Item.css'
 import { IoMdAddCircleOutline } from "react-icons/io";
 
 const Item = () => {
-    const [productos, setProductos] = useState([]);
-    useEffect(() => {
-        // Hacemos la solicitud para obtener los datos desde el backend
-        fetch('http://localhost:8080/api/productos')
-          .then((response) => response.json())
-          .then((data) => setProductos(data)) // Guardamos los datos en el estado
-          .catch((error) => console.error('Error al cargar productos:', error));
-    }, []);
+  const apiUrl = process.env.REACT_APP_API_URL;
+  const [productos, setProductos] = useState([]);
+  useEffect(() => {
+      // Hacemos la solicitud para obtener los datos desde el backend
+      fetch(`${apiUrl}/productos`)
+        .then((response) => response.json())
+        .then((data) => setProductos(data)) // Guardamos los datos en el estado
+        .catch((error) => console.error('Error al cargar productos:', error));
+  },[apiUrl]);
   return (
     <div className='item'>
         <h2 className='titol'> LLISTA PLATS </h2>
