@@ -1,0 +1,70 @@
+/* Footer Styles */
+.link-text{
+    color:white;
+    text-decoration: none;
+}
+
+.footer {
+    background-color: #282c34;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: flex;
+    bottom: 0;
+    width: 96,5%;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap; /* Allows items to wrap on small screens */
+  }
+  
+  .footer-section {
+    flex: 1;
+    min-width: 200px; /* Ensure sections don't get too small */
+    padding: 10px;
+    
+  }
+  
+  .footer-section h4 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin: 5px 0;
+    text-decoration: none;
+  }
+  
+  .footer-bottom {
+    margin-top: 20px;
+    font-size: 0.9em;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column; /* Stack sections vertically on small screens */
+      text-align: left;
+    }
+    
+    .footer-bottom {
+      margin-top: 10px;
+    }
+  }
+
+  .footer-section ul li a i {
+    margin-right: 8px;
+  }
+  
+  .footer-section ul li a {
+    display: flex;
+    align-items: center;
+  }
+  
