@@ -5,10 +5,11 @@ import { IoMdAddCircleOutline } from "react-icons/io";
 
 const Item = () => {
   const apiUrl = process.env.REACT_APP_API_URL;
+  // const apiUrl = "https://tf-backend-production.up.railway.app";
   const [productos, setProductos] = useState([]);
   useEffect(() => {
       // Hacemos la solicitud para obtener los datos desde el backend
-      fetch(`${apiUrl}/productos`)
+      fetch(`${apiUrl}/api/productos`)
         .then((response) => response.json())
         .then((data) => setProductos(data)) // Guardamos los datos en el estado
         .catch((error) => console.error('Error al cargar productos:', error));

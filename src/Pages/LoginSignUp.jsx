@@ -14,7 +14,7 @@ const LoginSignUp = () => {
     e.preventDefault(); // Evita que se recargue la página
   
     try {
-      const response = await fetch(`${apiUrl}/users/login`, {
+      const response = await fetch(`${apiUrl}/api/users/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
