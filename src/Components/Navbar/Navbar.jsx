@@ -5,7 +5,7 @@ import './Navbar.css';
 import logo from '../Assets/logo.png';
 import cart_icon from '../Assets/carrito.png';
 
-export const Navbar = ({ menu, setMenu}) => {
+export const Navbar = ({ menu, setMenu, cartItems}) => {
   return (
     <div className='navbar'>
       <div className="nav-logo">
@@ -26,7 +26,7 @@ export const Navbar = ({ menu, setMenu}) => {
         {/* mirar com fer si un usuari esta ja loggejat aparega logout */}
         <Link to='/login'><button onClick={() => setMenu("login")}>LOGIN</button></Link>
         <Link to='/cart'><img onClick={() => setMenu("cart")} className="fotocarro" src={cart_icon} alt=''/></Link>
-        <div className="nav-cart-count">0</div>
+        <div className="nav-cart-count">{cartItems.length}</div>
       </div>
     </div>
   )

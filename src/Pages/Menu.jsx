@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './CSS/Menu.css';
 import Item from '../Components/Item/Item'
 
-const Menu = () => {
+const Menu = ({ addToCart }) => {
   const apiUrl = process.env.REACT_APP_API_URL;
   const [productos, setProductos] = useState([]);
   const [tipos, setTipos] = useState([]);
@@ -36,11 +36,11 @@ const Menu = () => {
         <h2 className='titol'> LLISTA PLATS </h2> 
         <div className="product-list"> 
           {productos.map((producto) => ( 
-            <Item key={producto._id} producto={producto} /> 
+            <Item key={producto._id} producto={producto} addToCart={addToCart} /> 
           ))} 
-          </div> 
         </div> 
-      </div>
+      </div> 
+    </div>
   )
 }
 

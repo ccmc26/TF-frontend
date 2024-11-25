@@ -9,15 +9,12 @@ import LoginSignUp from '../Pages/LoginSignUp'
 import Register from '../Pages/Register'
 // import Item from '../Components/Item/Item';
 
-export const AppRoutes = () => {
+export const AppRoutes = ({ addToCart, removeFromCart, cartItems}) => {
   return (
     <Routes>
         <Route path='/' element={<Inici/>} />
-        <Route path='/menu' element={<Menu/>}/>
-        {/* <Route path='/product' element={<Product/>}> */}
-             {/* <Route path=':productId' element={<Item/>}/>
-        </Route>  */}
-        <Route path="/cart" element={<Cart/>}/>
+        <Route path='/menu' element={<Menu addToCart={addToCart}/>}/>
+        <Route path="/cart" element={<Cart cartItems={cartItems} removeFromCart={removeFromCart}/>} />
         <Route path='/login' element={<LoginSignUp/>}/>
         <Route path='/register' element={<Register/>}/>
         {/* aci anira la del password */}
