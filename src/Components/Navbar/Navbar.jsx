@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 
 import logo from '../Assets/logo.png';
 import cart_icon from '../Assets/carrito.png';
+import { CartContext }  from '../../Context/CartContext';
 
-export const Navbar = ({ menu, setMenu, cartItems}) => {
+export const Navbar = ({ menu, setMenu }) => {
+  const { cartItems } = useContext(CartContext);
   return (
     <div className='navbar'>
       <div className="nav-logo">

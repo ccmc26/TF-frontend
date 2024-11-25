@@ -1,11 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import './CSS/Menu.css';
 import Item from '../Components/Item/Item'
+import  { CartContext } from '../Context/CartContext';
 
-const Menu = ({ addToCart }) => {
+const Menu = () => {
   const apiUrl = process.env.REACT_APP_API_URL;
   const [productos, setProductos] = useState([]);
   const [tipos, setTipos] = useState([]);
+  const { handleAddToCart } = useContext(CartContext);
   
   // fetch per a obtindre tots els tipos ASC
   useEffect(() => {
@@ -36,7 +38,7 @@ const Menu = ({ addToCart }) => {
         <h2 className='titol'> LLISTA PLATS </h2> 
         <div className="product-list"> 
           {productos.map((producto) => ( 
-            <Item key={producto._id} producto={producto} addToCart={addToCart} /> 
+            <Item key={producto._id} producto={producto} addToCart={handleAddToCart} /> 
           ))} 
         </div> 
       </div> 
