@@ -21,8 +21,6 @@ const CartProvider = ({ children }) => {
       return updatedItems; 
     }); 
     setItemCount(prevCount => prevCount + 1); // Incrementar el contador };
-        
-
   };
 
   const handleRemoveFromCart = (productToRemove) => {
