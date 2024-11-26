@@ -7,7 +7,7 @@ import cart_icon from '../Assets/carrito.png';
 import { CartContext }  from '../../Context/CartContext';
 
 export const Navbar = ({ menu, setMenu }) => {
-  const { cartItems } = useContext(CartContext);
+  const { itemCount } = useContext(CartContext);
   return (
     <div className='navbar'>
       <div className="nav-logo">
@@ -28,7 +28,7 @@ export const Navbar = ({ menu, setMenu }) => {
         {/* mirar com fer si un usuari esta ja loggejat aparega logout */}
         <Link to='/login'><button onClick={() => setMenu("login")}>LOGIN</button></Link>
         <Link to='/cart'><img onClick={() => setMenu("cart")} className="fotocarro" src={cart_icon} alt=''/></Link>
-        <div className="nav-cart-count">{cartItems.length}</div>
+        <div className="nav-cart-count">{itemCount}</div>
       </div>
     </div>
   )
