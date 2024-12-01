@@ -4,8 +4,8 @@ import './Navbar.css';
 
 import logo from '../Assets/logo.png';
 import cart_icon from '../Assets/carrito.png';
-import { CartContext }  from '../../Context/CartContext';
 
+import { CartContext }  from '../../Context/CartContext';
 import { AuthContext } from '../../Context/AuthCOntext';
 
 export const Navbar = ({ menu, setMenu }) => {
@@ -14,8 +14,10 @@ export const Navbar = ({ menu, setMenu }) => {
   return (
     <div className='navbar'>
       <div className="nav-logo">
-        <img className="fotologo" src={logo} alt="" />
-        <p className='baixfoto'>LA TRAVESSA</p>
+        <Link className="textt" to={'/'}>
+          <img className="fotologo" src={logo} alt=""/>
+          <p className='baixfoto'>LA TRAVESSA</p>
+        </Link>
       </div>
       <ul className="nav-menu">
         {/* cada element del menu te un event que seteja el hookal valor indicat */}

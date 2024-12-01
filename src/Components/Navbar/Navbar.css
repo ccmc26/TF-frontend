@@ -23,9 +23,13 @@ img.fotocarro{
 
 p.baixfoto {
     position: relative;
-    top: -5%;
+    top: -6%;
     left: 0%;
     color: #171717;
+}
+
+.textt{
+    text-decoration: none;
 }
 
 .nav-menu{
