@@ -1,14 +1,14 @@
 import React from 'react'
 import Hero from '../Components/Hero/Hero'
-// import Popular from '../Components/Popular/Popular'
+import Heather from '../Components/Heather/Heather'
 
 
 const Inici = () => {
   return (
     <div>
       <Hero/>
-      {/* <Popular/> */}
-      inici
+      <Heather/>
+      
     </div>
   )
 }

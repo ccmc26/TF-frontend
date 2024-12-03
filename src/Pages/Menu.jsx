@@ -10,7 +10,7 @@ const Menu = () => {
   // fetch per a obtindre tots els tipos ASC
   useEffect(() => {
     // Hacemos la solicitud para obtener todos los tipos
-    fetch(`${apiUrl}/api/tipos/asc`)
+    fetch(`${apiUrl}/api/tipos/tipos-con-productos`)
       .then((response) => response.json())
       .then((data) => setTipos(data)) // guarda dades
       .catch((error) => console.error('Error al cargar tipos:', error));

@@ -1,0 +1,45 @@
+.heather{
+    display: block;
+    height: 40vw;
+    /* width: auto; */
+    margin: 30px auto;
+    background: url('../Assets/Platos-tipicos-de-Valencia.jpg2_-1024x576.jpg') no-repeat center;
+    background-size: contain;
+    position: relative;
+}
+
+.header-contents{
+    margin-left: 7vw;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* gap: 1vw; */
+    max-width: 50%;
+    bottom: 10%;
+    left: 6vw;
+}
+
+.header-contents h2{
+    margin-bottom: 0%;
+    font-weight: 500;
+    color: #ffffff;
+    text-shadow:2px 2px 4px rgba(0, 0, 0, 0.6);
+    font-size: max(4.5vw, 22px);
+}
+
+.header-contents p{
+    color: #ffffff;
+    font-size: 1vw;
+    text-shadow:2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.header-contents button{
+    border: none;
+    color: #282828;
+    font-weight: 500;
+    padding: 1vw 2.3vw;
+    background-color: white;
+    font-size: max(1vw, 13px);
+    border-radius: 50px;
+}
