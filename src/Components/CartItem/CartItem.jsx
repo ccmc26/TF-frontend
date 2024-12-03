@@ -7,8 +7,8 @@ const CartItem = ({ item }) => {
 
     return (
         <div className="cart-item"> 
-            <h3>{item.product.name}</h3> 
-            <p>Precio unidad: {item.product.price}€</p> 
+            <h3>{item.product.nombreProducto}</h3> 
+            <p>Precio unidad: {item.product.precioProducto}€</p> 
             <p>Cantidad: {item.quantity}</p>
             <button onClick={() => handleRemoveFromCart(item.product)}>Eliminar</button>
             <button onClick={() => handleAddToCart(item.product)}>Añadir</button>  

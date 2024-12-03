@@ -18,11 +18,13 @@
 
 .product h2 { 
     text-align: left; 
+    font-size: 22px;
 } 
 
 .product p { 
     text-align: left; 
     padding-top: 5px;
+    font-size: 20px;
 }
 
 .icon-button { 
