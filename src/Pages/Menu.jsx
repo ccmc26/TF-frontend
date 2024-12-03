@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from 'react'
+import { useLocation } from 'react-router-dom';
 import './CSS/Menu.css';
 import Item from '../Components/Item/Item'
 
 const Menu = () => {
   const apiUrl = process.env.REACT_APP_API_URL;
   const [productos, setProductos] = useState([]);
+  const location = useLocation(); // Obtener la ubicación de la URL
+  const hash = location.hash;
   
-  // fem un fetch per a tindre tots els productes de manera ordenada ASC
-  // utilitzem el useEffect per a controlar la asincronia i asegurar que
-  // soles es fa quan una dependencia canvia
-  
+  // fetch a la tabla transicio per fer-ho mes sencill
+  // cada producto es un item en la corresponguent info
   useEffect(() => {
     fetch(`${apiUrl}/api/ptp`)
       .then((response) => response.json())
@@ -19,6 +20,16 @@ const Menu = () => {
 
   let lastTipo = "lolololo";
 
+  // useEffect(() => {
+    
+  //   if (hash) {
+  //     const element = document.querySelector(hash);
+  //     if (element) {
+  //       element.scrollIntoView({ behavior: 'auto' }); // Desplazamiento hacia el elemento
+  //     }
+  //   }
+  // },); 
+
   return (
     <div> 
       <div className='item'> 
@@ -27,12 +38,15 @@ const Menu = () => {
         {productos.map((producto) => { 
           const tipoChanged = producto.nombreTipo !== lastTipo; 
           lastTipo = producto.nombreTipo; 
-          console.log(tipoChanged);
+          // console.log(tipoChanged);
+          console.log(hash);
           return ( 
             <div key={producto._id}> 
             {tipoChanged ? ( 
               <> 
-                <h2>{producto.nombreTipo.toUpperCase()}</h2> 
+                <h2 id={producto.tipoProductoId} >
+                  {producto.nombreTipo.toUpperCase()}
+                </h2> 
                 <Item producto={producto} /> 
               </> 
             ) : ( 
