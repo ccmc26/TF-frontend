@@ -21,6 +21,8 @@ const Inici = () => {
     <div>
       <Hero/>
       <Heather/>
+      <h2 className='h1t'>Explora el nostre menú</h2>
+      <p className='pt'>Explora les nostres categories i troba el teu pròxim plat favorit.<br/>Des d'entrants deliciosos fins a postres irresistibles, la nostra varietat satisfà tots els gustos.</p>
       <div className='menjars'>
       {tipos.map((tipo) => {
         return (
