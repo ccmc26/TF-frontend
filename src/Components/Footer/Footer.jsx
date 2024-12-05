@@ -4,7 +4,7 @@ import './Footer.css';
 import { Link } from 'react-router-dom';
 import { IoLogoInstagram, IoLogoFacebook, IoLogoTwitter, IoLogoPinterest, IoLogoTwitch, IoLogoYoutube, IoIosRestaurant  } from "react-icons/io";
 
-export const Footer = ({setMenu}) => {
+export const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
@@ -18,11 +18,11 @@ export const Footer = ({setMenu}) => {
         <div className="footer-section">
           <h4>Links</h4>
           <ul>
-            <li onClick={() => setMenu("inici")}><Link className='link-text' to='/'>INICI</Link></li>
-            <li onClick={() => setMenu("menu")}><Link className='link-text' to='/menu'>MENÚ</Link></li>
+            <li><Link className='link-text' to='/'>INICI</Link></li>
+            <li><Link className='link-text' to='/menu'>MENÚ</Link></li>
             {/* canviar les dos rutes de baix */}
-            <li onClick={() => setMenu("galeria")}><Link className="link-text" to='/'>GALERÍA</Link></li>
-            <li onClick={() => setMenu("nosaltres")}> <Link className="link-text" to='/'>NOSALTRES</Link></li>
+            <li><Link className="link-text" to='/'>GALERÍA</Link></li>
+            <li><Link className="link-text" to='/'>NOSALTRES</Link></li>
           </ul>
         </div>
         <div className="footer-section">

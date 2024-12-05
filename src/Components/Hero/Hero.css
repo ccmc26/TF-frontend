@@ -2,8 +2,10 @@
     display: flex;
     justify-content: space-around;
     padding: 26px;
-    box-shadow: 0 1px 3px -2px black;
-    background-color: #ffa200;
+    box-shadow: 0 -1px 3px -2px black,
+                0  1px 3px -2px black;
+    background-color: white;
     /* color: white; */
+    /* background-color: #ffa200 */
 }
 
