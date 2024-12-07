@@ -4,13 +4,15 @@ import { CartContext } from './CartContext';
 const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
   const [itemCount, setItemCount] = useState(0); // Estado del contador
-
+  const [totalPrice, setTotalPrice] = useState(0);
+  
   const handleAddToCart = (product) => {
     setCartItems((prevItems) => { 
       // Copiar el array de items existentes 
       const updatedItems = [...prevItems]; 
       // Buscar el índice del producto existente 
       const existingProductIndex = updatedItems.findIndex(item => item.product._id === product._id); 
+      ;
       if (existingProductIndex !== -1) { 
         // Si el producto ya existe en el array, incrementamos la cantidad 
         updatedItems[existingProductIndex].quantity += 1; 
@@ -21,6 +23,7 @@ const CartProvider = ({ children }) => {
       return updatedItems; 
     }); 
     setItemCount(prevCount => prevCount + 1); // Incrementar el contador };
+    setTotalPrice(prevPrice => prevPrice + parseFloat(product.precioProducto));
   };
 
   const handleRemoveFromCart = (productToRemove) => {
@@ -38,12 +41,12 @@ const CartProvider = ({ children }) => {
         } 
       } return updatedItems;
     });
-
     setItemCount(prevCount => Math.max(prevCount - 1, 0)); // Asegurarse de que el contador sea positivo
+    setTotalPrice(prevPrice => prevPrice - parseFloat(productToRemove.precioProducto));
   };
 
   return (
-    <CartContext.Provider value={{ cartItems, handleAddToCart, handleRemoveFromCart, itemCount }}>
+    <CartContext.Provider value={{ cartItems, handleAddToCart, handleRemoveFromCart, itemCount, totalPrice }}>
       {children}
     </CartContext.Provider>
   );

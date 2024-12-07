@@ -4,22 +4,23 @@ import { CartContext } from '../Context/CartContext';
 import './CSS/Cart.css';
 
 const Cart = () => {
-  const { cartItems, itemCount} = useContext(CartContext)
-  console.log(cartItems);
+  const { cartItems, itemCount, totalPrice} = useContext(CartContext)
+  // console.log(cartItems);
+  console.log(totalPrice);
   return (
     <div className="cart"> 
-      <h2>Carrito de Compras</h2> 
-      <p>Total de artículos: {itemCount}</p> 
+      <h2>CISTELLA DE  LA COMPRA</h2> 
+      <p>Total de productes: {itemCount}</p> 
       <div className="cart-items"> 
         {cartItems.length === 0 ? ( 
-          <p>El carrito está vacío</p> 
+          <p>La cistella està buida</p> 
           ) : ( 
           cartItems.map((item, index) => ( 
             <CartItem key={index} item={item} /> )) 
           )} 
           </div> 
         <div className="cart-summary"> 
-          <p>Total: {}</p> 
+          <p>Total: {totalPrice}</p> 
           <button className="checkout-button">Proceder al Pago</button> 
       </div> 
     </div>
