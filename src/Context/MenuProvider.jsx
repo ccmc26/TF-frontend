@@ -21,6 +21,9 @@ const MenuProvider = ({ children }) => {
             case "/nosaltres":
                 setMenu('nosaltres');
                 break;
+            case "/nproducte":
+                setMenu('nproducte');
+                break;
             default:
                 setMenu('noimporta');
                 break;

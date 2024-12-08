@@ -20,10 +20,8 @@ function App() {
           <BrowserRouter>
             <MenuProvider>
               <Navbar/>
-                <div className="content">
-                  <AppRoutes />
-                </div>
-              <Footer/>  {/*este tambe te lo del menu*/}
+                <AppRoutes/>
+              <Footer/>
             </MenuProvider>
           </BrowserRouter>
         </CartProvider>

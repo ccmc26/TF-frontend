@@ -10,7 +10,7 @@ const Cart = () => {
   return (
     <div className="cart"> 
       <h2>CISTELLA DE  LA COMPRA</h2> 
-      <p>Total de productes: {itemCount}</p> 
+      <p>Quantitat total de productes: {itemCount}</p> 
       <div className="cart-items"> 
         {cartItems.length === 0 ? ( 
           <p>La cistella està buida</p> 
