@@ -1,0 +1,27 @@
+.submenu {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    border-top: 1px solid #ddd; 
+    border-bottom: 1px solid #ddd; 
+    padding: 10px 0; 
+    font-size: 17.5px; 
+}
+
+.submenu ul {
+    display: flex; 
+    list-style-type: none; 
+    margin: 20px auto;
+    padding: 0;
+}
+
+.submenu li {
+    margin: 0 15px;
+}
+
+.text {
+    text-decoration: none; 
+    color: #171717;
+    padding: 5px 10px; 
+    border-radius: 5px; 
+}

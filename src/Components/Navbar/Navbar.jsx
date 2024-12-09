@@ -31,9 +31,9 @@ export const Navbar = () => {
           <li><Link className='link-style' to='/nproducte'>PRODUCTE</Link>{menu==="nproducte" ? <hr/> : <></>}</li>
         ) : (
           <>
-          <li><Link className="link-style" to='/'>GALERIA</Link>{menu==="galeria" ? <hr/> : <></>}</li>
+          <li><Link className="link-style" to='/galeria'>GALERIA</Link>{menu==="galeria" ? <hr/> : <></>}</li>
           {/* canviar el nosaltres, sobra, vore que possar */}
-          <li><Link className="link-style" to='/'>NOSALTRES</Link>{menu==="nosaltres" ? <hr/> : <></>}</li>
+          <li><Link className="link-style" to='/nosaltres'>NOSALTRES</Link>{menu==="nosaltres" ? <hr/> : <></>}</li>
         </>
         )}
       </ul>

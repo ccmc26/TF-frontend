@@ -1,8 +1,11 @@
 import React from 'react'
+import { Submenu } from '../Components/SubMenu/Submenu';
+// import { Afegir } from '../Pages/Afegir';
 
 const NProducte = () => {
   return (
-    <div>NProducte</div>
+    <Submenu/>
+    // <Afegir/>
   )
 }
 
