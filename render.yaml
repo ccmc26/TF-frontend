@@ -5,7 +5,7 @@
   startCommand: "HOST=0.0.0.0 PORT=8080 DISABLE_HOST_CHECK=true npm run start"
   envVars:
     - key: REACT_APP_API_URL
-      value: "https://tf-backend-production.up.railway.app"
+      value: https://tf-backend-production.up.railway.app
     - key: PORT
       value: "8080"
     - key: HOST
