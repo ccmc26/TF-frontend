@@ -21,7 +21,7 @@ export const Footer = () => {
             <li><Link className='link-text' to='/'>INICI</Link></li>
             <li><Link className='link-text' to='/menu'>MENÚ</Link></li>
             {/* canviar les dos rutes de baix */}
-            <li><Link className="link-text" to='/'>GALERÍA</Link></li>
+            <li><Link className="link-text" to='/galeria'>GALERÍA</Link></li>
             <li><Link className="link-text" to='/'>NOSALTRES</Link></li>
           </ul>
         </div>
