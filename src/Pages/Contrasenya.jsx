@@ -18,8 +18,8 @@ const ForgotPassword = () => {
             body: JSON.stringify({ password: newPassword }),
         });
 
-        console.log(email, newPassword);
-        navigate('/menu');
+        // console.log(email, newPassword); // para comprobar si se envia todo correctamente
+        navigate('/login');
     } catch (error) {
         console.error('Error en l\'actualització de la contrasenya:', error); 
     }
