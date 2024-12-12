@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './CSS/Afegir.css'
 
 function CreateProductForm() {
@@ -9,6 +10,7 @@ function CreateProductForm() {
     const [price, setPrice] = useState(''); 
 
     const [tipo, setTipo] = useState([]);
+    const navigate = useNavigate();
 
     useEffect(() => {
         fetch(`${apiUrl}/api/tipos`)
@@ -32,8 +34,8 @@ function CreateProductForm() {
                 alert(data.message || 'Error en el registre');
                 throw new Error('Error al afegir el producte'); 
             } 
-            
-            console.log('Producte afeit:', data); 
+            navigate('/menu');
+            // console.log('Producte afegit:', data); 
         } catch (error) { 
             console.error('Error:', error); 
         } 
