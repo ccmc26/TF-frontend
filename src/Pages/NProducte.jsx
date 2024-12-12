@@ -1,11 +1,15 @@
 import React from 'react'
-import { Submenu } from '../Components/SubMenu/Submenu';
+import Submenu from '../Components/SubMenu/Submenu';
+import { Outlet } from 'react-router-dom';
+
 // import { Afegir } from '../Pages/Afegir';
 
 const NProducte = () => {
   return (
-    <Submenu/>
-    // <Afegir/>
+    <div>
+      <Submenu/>
+      <Outlet/>
+    </div>
   )
 }
 
