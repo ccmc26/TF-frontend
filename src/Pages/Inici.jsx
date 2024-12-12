@@ -17,7 +17,7 @@ const Inici = () => {
       .catch((error) => console.error('Error al cargar productos: '))
   },[apiUrl]);
 
-  console.log(apiUrl);
+  // console.log(apiUrl);
   return (
     <div>
       <Hero/>
