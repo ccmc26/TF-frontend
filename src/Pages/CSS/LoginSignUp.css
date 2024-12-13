@@ -1,35 +1,40 @@
-.loginsignup{
-    height: 70vh;
+/* Estilos para la página de login, registro y cambio de contraseña */
+.loginsignup {
+    min-height: 70vh;
     background-image: url('../../Components/Assets/istockphoto-1457979959-612x612.jpg');
-    background-size: cover; 
-    background-position: center; 
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     padding-top: 100px;
     padding-bottom: 100px;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.loginsignup-container{
+.loginsignup-container {
     width: 35%;
     height: auto;
     background: white;
     margin: auto;
     padding: 40px 60px;
     border-radius: 10%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.loginsignup-container h1{
+.loginsignup-container h1 {
     margin: 20px 0px;
 }
 
-.loginsignup-fields{
+.loginsignup-fields {
     display: flex;
     flex-direction: column;
     gap: 25px;
     margin-top: 30px;
 }
 
-.loginsignup-fields input{
+.loginsignup-fields input {
     height: 52px;
     width: 97%;
     padding-left: 20px;
@@ -39,7 +44,7 @@
     font-size: 18px;
 }
 
-.loginsignup-container button{
+.loginsignup-container button {
     width: 101%;
     height: 52px;
     color: white;
@@ -58,11 +63,23 @@
     font-weight: 500;
 }
 
-.loginsignup-login .link-text{
-    color: #0069F0;
+.loginsignup-login .link-text {
+    color: #0069f0;
     font-weight: 600;
 }
 
-/* .link-text{
-    text-decoration: none;
-} */
+  /* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    .loginsignup-container {
+        width: 60%;
+        padding: 6.5%;
+    }
+
+    .loginsignup-fields input {
+        width: 90%;
+    }
+
+    .loginsignup-container button {
+        width: 95.85%; 
+    }
+}

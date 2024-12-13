@@ -43,7 +43,7 @@ const LoginSignUp = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          <p style={{ marginTop: "20px" }} className="loginsignup-login">
+          <p style={{ marginTop: "20px", marginBottom: "-10px"}} className="loginsignup-login">
             No me'n recorde de la <span><Link className='link-text' to='/password'>contrasenya</Link></span>
           </p>
           <button type="submit">LogIn</button>

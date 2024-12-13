@@ -96,43 +96,43 @@ p.baixfoto {
     color: white;
 }
 
-/* @media (max-width: 480px) {
-    .navbar {
-        flex-direction: column;
-        align-items: center;
-        padding: 10px;
-    }
-
-    img.fotologo {
-        width: 80px; 
-    }
-
-    img.fotocarro {
-        width: 35px;
-    }
-
-    .nav-menu {
+@media (max-width: 889px) { 
+    .navbar { 
         flex-direction: column; 
-        gap: 15px;
-        font-size: 16px; 
-    }
-
-    .nav-login-cart {
-        flex-direction:column; 
-        gap: 15px;
-    }
-
+        align-items: center;
+    } 
+    
+    .nav-menu { 
+        flex-direction: column; 
+        gap: 15px; 
+    } 
+    
+    .nav-login-cart { 
+        flex-direction: column; 
+        gap: 15px; 
+    } 
+    
+    img.fotologo {
+        width: 80px;
+        margin-left: 15px;
+    } 
+    
+    img.fotocarro { 
+        width: 35px; 
+    } 
+    
     .nav-login-cart button {
-        width: 100px;
-        height: 40px;
+        width: 100px; 
+        height: 40px; 
         font-size: 16px; 
+        margin-top: 10px;
+    } 
+    
+    .nav-cart-count { 
+        width: 20px; 
+        height: 20px; 
+        font-size: 12px; 
+        margin-top: -30px; 
+        margin-left: -40px; 
     }
-
-    .nav-cart-count {
-        width: 20px;
-        height: 20px;
-        font-size: 12px;
-        margin-top: -30px;
-        margin-left: -40px;
-    }
-} */
+}
