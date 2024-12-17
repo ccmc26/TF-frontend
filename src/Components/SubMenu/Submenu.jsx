@@ -9,6 +9,7 @@ const Submenu = () => {
             <li><Link className='text' to='/nproducte/afegir'>AFEGIR</Link></li>
             <li><Link className='text' to='/nproducte/update'>ACTUALITZAR</Link></li>
             <li><Link className='text' to='/nproducte/delete'>ELIMINAR</Link></li>
+            <li><Link className='text' to=''>COMANDES</Link></li>
         </ul>
     </div>
   )
